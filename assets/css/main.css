@@ -19,7 +19,6 @@
     padding: 20px;
     color: white;
     background-color: #00a2c6;
-  
     text-align: center;
     font-weight: bold;
   }
@@ -100,7 +99,7 @@
   nav ul {
     padding-inline: 4rem;
     display: flex;
-    gap: 2rem;
+    gap: 1rem;
   }
   
   nav li {
@@ -122,6 +121,11 @@
     display: flex;
     gap: 1.5rem;
     background-color: #050118;
+    -webkit-filter: blur(10px);
+    -moz-filter: blur(10px);
+    -o-filter: blur(10px);
+    -ms-filter: blur(10px);
+    filter: blur(10px);
   }
   
   #content {
@@ -195,5 +199,17 @@
     }
     #home .paragraph {
       width: 100%;
+    }
+    .jumbotron {
+      padding: 21rem 0;
+    }
+    .jumbotron h1 {
+      margin-bottom: 0;
+      font-size: 33px;
+    }
+    .jumbotron p {
+      margin-top: 0;
+      font-size: 13px;
+      padding: 2px;
     }
   }
