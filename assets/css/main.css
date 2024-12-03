@@ -10,15 +10,23 @@
     padding: 0;
   }
   
+  main h1,
   h2,
   h3 {
-    color: #00a2c6;
+    color: #fad5fb;
+  }
+
+  .position-sticky {
+    position: sticky!important;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.7),rgba(0, 0, 0, 0.9))!important;
+    transition:all 1s;
+    /* transform: translateY(-64px); */
   }
   
   footer {
     padding: 20px;
     color: white;
-    background-color: #00a2c6;
+    background-color: #9e0087fb;
     text-align: center;
     font-weight: bold;
   }
@@ -37,7 +45,7 @@
   
   nav ul li:hover a {
     color: #ffffff;
-    background-color: #dd00bc;
+    background-color: #dd00bc7f;
   }
   .profile header {
     text-align: center;
@@ -45,12 +53,13 @@
   
   .featured-image {
     width: 40%;
-    max-height: 270px;
+    max-height: 400px;
+    margin: 20px 0;
     object-fit: contain;
     object-position: center;
   }
 
-  .galery-container {
+  .experiences-container {
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
@@ -58,7 +67,7 @@
     gap: 2rem;
   }
 
-  .galery-image {
+  .experiences-image {
     width: 250px;
     max-height: 400px;
     object-fit: contain;
@@ -66,15 +75,77 @@
   }
   
   .profile img {
-    width: 200px;
+    width: 300px;
   }
   
-  .card {
-    background-color: #491450;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  #home .card {
+    /* background-color: #b800d006; */
+    /* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); */
     border-radius: 5px;
-    padding: 20px;
+    padding: 30px;
     margin-top: 20px;
+    color: #fff;
+    min-height: 35rem;
+  }
+
+  #skills .card {
+    /* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); */
+    
+    border-radius: 5px;
+    padding: 30px;
+    margin-top: 10px;
+    color: #fff;
+    min-height: 35rem;
+  }
+
+  #skills .card-skills {
+    display: flex;
+    gap: 10px;
+  }
+
+  #skills .card-skills .skills-detail {
+    padding: 1rem 2rem;
+    background-color:#7c036aad;
+    border-radius: 25px;
+    min-height: 30rem;
+  }
+
+  #skills   .featured-image {
+    width: 100%;
+    max-height: 100px;
+    object-fit: contain;
+    object-position: center;
+  }
+
+  #home {
+    min-height: 45rem;
+    display: flex;
+    align-items: center;
+    padding: 0 4rem;
+  }
+  #skills {
+    min-height: 49.5rem;
+    display: flex;
+    /* align-items: center; */
+    padding: 3.5rem 4rem;
+    background-color: #b800d038;
+  }
+  
+  #home h2 {
+    padding-top: 0;
+    margin-top: 0;
+  } 
+  /* #home .card {
+    border-radius: 5px;
+    padding-left: 30px!important;
+    padding-right: 30px!important;
+    padding-bottom: 30px!important;
+    padding-top: 0!important;
+    /* margin-top: 20px; */
+ 
+
+  .profile.card {
+    margin-top: 50px;
   }
   
   .jumbotron {
@@ -111,25 +182,31 @@
     /* background-color: rgba(0, 0, 0, 0.21); */
     background: linear-gradient(to bottom, rgba(0, 0, 0, 0.7),rgba(0, 0, 0, 0.1));
     padding: 5px;
-    position: sticky;
+    /* position: sticky; */
     top: 0;
     /* box-shadow: 1px 2px 5px rgba(68, 68, 68, 0.4); */
   }
+
+  .navbar-mobile i {
+    background: black;
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
   
   main {
-    padding: 20px;
+    padding: 22px 0;
     display: flex;
     gap: 1.5rem;
-    background-color: #050118;
-    -webkit-filter: blur(10px);
-    -moz-filter: blur(10px);
-    -o-filter: blur(10px);
-    -ms-filter: blur(10px);
-    filter: blur(10px);
+    /* background-color: #050118; */
+    background: linear-gradient(rgba(0, 0, 0, 0.8),rgba(0, 0, 0, 0.8)), url(../img/background_2.jpg);
+    background-size: contain;
   }
   
   #content {
     flex: 4;
+    margin: 2rem 0;
     display: flex;
     flex-flow: column nowrap;
     gap: 1rem 2rem;
@@ -137,7 +214,7 @@
 
   #content .text-link {
     text-decoration: underline;
-    color: black;
+    color: #ed00c9;
     cursor: pointer;
   }
 
@@ -148,11 +225,14 @@
   .content-introduction {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
   }
 
   #home .paragraph {
     width: 60%;
   }
+
 
    
   aside {
@@ -174,15 +254,33 @@
     main aside {
       align-self: center;
     }
+    #skills .card-skills {
+      flex-flow: column nowrap;
+    }
+    #skills {
+      padding: 0;
+    }
+    #skills .card-skills .skills-detail {
+      border-radius: 10px;
+    }
+    nav#navbar {
+      display: none;
+    }
   }
    
   @media screen and (max-width: 768px) {
+    .card {
+      padding: 20px;
+    }
     nav ul {
       justify-content: center;
     }
    
     main aside {
       align-self: stretch;
+    }
+    main {
+      background: linear-gradient(rgba(0, 0, 0, 0.8),rgba(0, 0, 0, 0.8)), url(../img/background_3.jpg);
     }
     .jumbotron {
       padding: 60px;
@@ -196,6 +294,9 @@
       max-height: 270px;
       object-fit: contain;
       object-position: center;
+    }
+    #home{
+      padding: 0;
     }
     #home .paragraph {
       width: 100%;
