@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta property="og:title" content="My Profile"> 
+  <meta property="og:title" content="Matius Febrian Christo"> 
   <meta property="og:description" content="Hi everyone, this is my web profile. This website still on progress building so maybe some content will not running well"> 
   <meta property="og:image" content="https://raw.githubusercontent.com/matiusfebrianchristo/profile/refs/heads/main/assets/img/og_img.jpg"> 
   <meta property="og:url" content="https://matius-profile.netlify.app/"> 
@@ -16,6 +16,12 @@
   <title>Halaman Profil Matius</title>
 
   <!-- Main CSS -->
+  <link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+  integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+  crossorigin="anonymous"
+  referrerpolicy="no-referrer"/>
   <link rel="stylesheet" href="assets/css/main.css" />
   <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
@@ -28,38 +34,23 @@
   <!-- Start Header -->
   <header>
     <nav id="navbar">
-      <ul>
-        <li>
-          <a href="#about">About</a>
-        </li>
-        <li>
-          <a href="#skills">Skills</a>
-        </li>
-        <li>
-          <a href="#experiences">Experiences</a>
-        </li>
-        <li>
-          <a href="#sertificate">Sertificate</a>
-        </li>
-      </ul>
-    </nav>
-    <!-- <nav id="navbar-mobile">
-      <i class="fa fa-bars"></i>
-      <ul>
-        <li>
-          <a href="#about">About</a>
-        </li>
-        <li>
-          <a href="#skills">Skills</a>
-        </li>
-        <li>
-          <a href="#experiences">Experiences</a>
-        </li>
-        <li>
-          <a href="#sertificate">Sertificate</a>
-        </li>
-      </ul>
-    </nav> -->
+      <div class="navbar-container container">
+        <!-- <input type="checkbox" id="menu-toggle"> -->
+        <!-- <div class="hamburger-lines">
+          <label for="menu-toggle">
+            <span class="line line1"></span>
+            <span class="line line2"></span>
+            <span class="line line3"></span>
+          </label>
+        </div> -->
+        <ul class="menu-items">
+          <li><a href="#about">About</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#experiences">Experiences</a></li>
+          <li><a href="#certificate">Certificate</a></li>
+        </ul>
+      </div>
+    </nav>    
     <div class="jumbotron">
       <h1>Matius Febrian Christo</h1>
       <p>Mistakes are a natural part of life, but we need to know that we need to learn from them</p>
@@ -71,7 +62,7 @@
   <main id="about">
     <!-- Konten artikel -->
     <div id="content">
-      <article id="home">
+      <article id="article-about">
         <div class="card">
           <h2 style="text-align:center; font-size:35px;">Introduction</h2>
           <div class="content-introduction">
@@ -85,10 +76,10 @@
                 and have worked for 1 year and 10 months as a Network Engineer. 
               </p>
               <p>      
-                Besides that, I also like programming, especially web programming. Since I was in middle school, I've always liked programming and have tried to make a simple web. However, due to constraints by the device, this has not materialized. I also did an internship as a frontend developer at <strong><a href="https://www.agunacourse.com/" target="_blank" class="text-link">Aguna Course</a> </strong>. That's where I want to learn and know more about programming
+                Besides that, I also like programming, especially web programming. Since I was in middle school, I've always liked programming and have tried to make a simple web. However, due to constraints by the device, this has not materialized. I also did an internship as a frontend developer at <strong><a href="https://www.agunacourse.com/" target="_blank" class="text-link">Aguna Course</a> </strong>. That's where I want to learn and know more about programming.
               </p>
               <p>      
-                And I also like to learn new things, especially in the field of programming, such as trying to create automation to make it easier for me to do a job. Even though I work as a Network Engineer, I still continue to study programming, especially web programming. I'm always looking for loopholes or free time to learn about it. Sometimes it's a bit tiring because I'm required to be able to network but also want to learn programming. I keep going and never give up because I hope one day I can become a programmer
+                And I also like to learn new things, especially in the field of programming, such as trying to create automation to make it easier for me to do a job. Even though I work as a Network Engineer, I still continue to study programming, especially web programming. I'm always looking for loopholes or free time to learn about it. Sometimes it's a bit tiring because I'm required to be able to network but also want to learn programming. I keep going and never give up because I hope one day I can become a programmer.
               </p>
             </div>
 
@@ -101,14 +92,50 @@
           <h2 style="text-align:center; font-size:35px;" >Skills</h2>
           <div class="card-skills">
             <div class="skills-detail">
-              <h2 style="text-align:center;" >Programming</h2>
+              <h2 style="text-align:center;" ><span style="font-weight: 300; font-size:19px; ">Programming Language</span><br>Javascript</h2>
               <hr>
               <img src="assets/icons/programs.svg" alt="networking" class="featured-image" />
               <p>
-                I know some programming languages ​​such as <b>Javascript</b> and <b>Python</b>. Although sometimes I need to open notes but I can understand the meaning of a line of the program. Not only basic Javascript, but also the framework of javascript, namely <b>VueJS</b> and <b>NuxtJS</b>. I have also learned <b>PHP</b> and <b>MySQL</b> database when I am free.
+                Javascript was the first programming language I knew about. For years I was stuck on JavaScript because it was difficult to learn, but when I was in high school, I could start to understand it. I tried making websites using JavaScript and even did an internship as a frontend where JavaScript was the main programming language at that time. I understand several frameworks such as VueJS and NuxtJS from where I interned.
+              </p>
             </div>
             <div class="skills-detail">
-              <h2 style="text-align:center;" >Network</h2>
+              <h2 style="text-align:center;" ><span style="font-weight: 300; font-size:19px; ">Programming Language</span><br>PHP</h2>
+              <hr>
+              <img src="assets/icons/programs.svg" alt="networking" class="featured-image" />
+              <p>
+                I understand basic PHP. I learned this when I was in high school by trying to create a website with a PHP login system. Some of the features that I built are register or create users, delete users, authentication and edit users. Of course this was related to the database where I was using MySQL at that time. I understand enough about MySQL that I use it to create PHP-based websites.
+              </p>
+            </div>
+            <div class="skills-detail">
+              <h2 style="text-align:center;" ><span style="font-weight: 300; font-size:19px; ">Programming Language</span><br>Python</h2>
+              <hr>
+              <img src="assets/icons/programs.svg" alt="networking" class="featured-image" />
+              <p>
+                I recently learned about the Python programming language. I understand basic Python programming. I use Python where I work, where the programming is used to create document automation with the purpose of make it easier to create so many documents and reducing the number of edits to these documents. And this has been going on until now.
+              </p>
+            </div>
+            <div class="skills-detail">
+              <h2 style="text-align:center;" ><span style="font-weight: 300; font-size:19px; ">Database</span><br>MySQL</h2>
+              <hr>
+              <img src="assets/icons/programs.svg" alt="networking" class="featured-image" />
+              <p>
+                I understand quite well about MySQL databases. This database is related to the PHP programming that I use. I also made a project at school, namely creating a PHP-based login web using a MySQL database where users can also create new data/register, delete or edit and authentication.
+              </p>
+            </div>
+            <div class="skills-detail">
+              <h2 style="text-align:center;" ><span style="font-weight: 300; font-size:19px; ">Networking</span><br>Basic</h2>
+              <hr>
+              <img src="assets/icons/programs.svg" alt="networking" class="featured-image" />
+              <p>
+                Apart from programming, I also understand the basics of networking such as routing, point-to-point, subnetting. I also understand quite a lot about several brands of network devices such as Cisco, Nokia, ZTE and Huawei.
+              </p>
+            </div>
+              <!-- <p>
+                I know some programming languages ​​such as <b>Javascript</b> and <b>Python</b>. Although sometimes I need to open notes but I can understand the meaning of a line of the program. Not only basic Javascript, but also the framework of javascript, namely <b>VueJS</b> and <b>NuxtJS</b>. I have also learned <b>PHP</b> and <b>MySQL</b> database when I am free.
+            </div> -->
+            <!-- <div class="skills-detail">
+              <h2 style="text-align:center;" >PHP</h2>
               <hr>
               <img src="assets/icons/network.svg" alt="networking" class="featured-image" />
               <p>
@@ -122,7 +149,7 @@
               <p>
                 Why do I prefer to work in the Network? Because to fill spare time and take advantage of what I have learned at school. I am majoring in Network and Computer Engineering. With basic network skills, it will be easier for me to work in the field of networking. However, this did not reduce my interest in becoming a programmer.
               </p>
-            </div>
+            </div> -->
           </div>
 
           
@@ -130,7 +157,7 @@
       </article>
 
       <article id="experiences" class="card">
-        <h2>Experiences</h2>
+        <h2 style="text-align:center; font-size:35px;">Experiences</h2>
         <p>The following are photos when I worked in the Network field. It was quite impressive and made me know how the internet works and is connected to each other</p>
         <div class="experiences-container">
           <img src="assets/img/picture-1.jpg" alt="picture-1" class="experiences-image" />
@@ -141,8 +168,8 @@
         </div>
       </article>
 
-      <article id="sertificate" class="card">
-        <h2>Sertificate</h2>
+      <article id="certificate" class="card">
+        <h2>Certificate</h2>
         <p>The following are photos when I worked in the Network field. It was quite impressive and made me know how the internet works and is connected to each other</p>
         <div class="experiences-container">
           <img src="assets/img/picture-1.jpg" alt="picture-1" class="experiences-image" />
@@ -197,8 +224,10 @@
   <!-- End Content -->
 
   <footer>
-    <p>&copy;2023 made with &hearts; by Matius Febrian Christo</p>
+    <p>&copy;2024 made with &hearts; by Matius Febrian Christo</p>
   </footer>
 </body>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script src="assets/js/main.js"></script>
 </html>
