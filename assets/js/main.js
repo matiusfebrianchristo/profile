@@ -37,3 +37,20 @@ $(document).ready(function () {
       } // End if
     });
   });
+
+const mobile_navbar = document.getElementById("menu-toggle")
+mobile_navbar.addEventListener('click', e => {
+  console.log(mobile_navbar.checked)
+  if (mobile_navbar.checked) {
+    // navbar.classList.add('height-100vh')
+    // navbar.style.height = "100vh" 
+    navbar.setAttribute('style', 'background:rgba(0, 0, 0, 0.8)!important; height:100vh;')
+  } else {
+    navbar.style.height = "auto"
+    navbar.style.background = ""
+    navbar.style.position = ""
+    navbar.style.width = ""
+    navbar.style.marginTop = ""
+    // navbar.classList.remove('height-100vh')
+  }
+})
