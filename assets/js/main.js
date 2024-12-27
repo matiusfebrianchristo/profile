@@ -2,12 +2,30 @@
 
 // body.addEventListener("", myScript);
 
+// function clickedHamburgerMenu (navbar){
+//   if (window.scrollY > "500") {
+//     navbar.classList.remove("on-mobile")
+//     navbar.classList.remove("top")
+//   } else if (window.screenY < "500") {
+//       navbar.classList.add("on-mobile")
+//       navbar.classList.add("top")
+//   }
+// }
+
 const navbar = document.getElementById("navbar")
+const jumbotron = document.getElementById("jumbotron")
+const mobile_navbar = document.getElementById("menu-toggle")
+
+console.log(jumbotron)
+
+
 window.addEventListener('scroll', () => {
     if (window.scrollY > "500") {
         navbar.classList.add("position-sticky")
+        navbar.classList.remove("top")
     } else if (window.screenY < "500") {
         navbar.classList.remove("position-sticky")
+        navbar.classList.add("top")
     }
 })
 
@@ -38,19 +56,26 @@ $(document).ready(function () {
     });
   });
 
-const mobile_navbar = document.getElementById("menu-toggle")
+
 mobile_navbar.addEventListener('click', e => {
-  console.log(mobile_navbar.checked)
   if (mobile_navbar.checked) {
-    // navbar.classList.add('height-100vh')
-    // navbar.style.height = "100vh" 
-    navbar.setAttribute('style', 'background:rgba(0, 0, 0, 0.8)!important; height:100vh;')
+    navbar.classList.add("on-mobile")
+    if (window.scrollY > "500") {
+      navbar.classList.remove("width-full")
+      navbar.classList.remove("position-fixed")
+      // navbar.classList.remove("top")
+      jumbotron.classList.remove('margin-top-m-13')
+    } else if (window.screenY < "500") {
+      navbar.classList.add("width-full")
+      navbar.classList.add("position-fixed")
+        // navbar.classList.add("top")
+        jumbotron.classList.add('margin-top-m-13')
+    }
   } else {
-    navbar.style.height = "auto"
-    navbar.style.background = ""
-    navbar.style.position = ""
-    navbar.style.width = ""
-    navbar.style.marginTop = ""
-    // navbar.classList.remove('height-100vh')
+    navbar.classList.remove("on-mobile")
+    navbar.classList.remove("width-full")
+    navbar.classList.remove("position-fixed")
+    // navbar.classList.remove("top")
+    jumbotron.classList.remove('margin-top-m-13')
   }
 })

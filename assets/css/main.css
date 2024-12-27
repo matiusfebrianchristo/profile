@@ -71,6 +71,19 @@
     object-fit: contain;
     object-position: center;
   }
+
+  .margin-top-m-13 {
+    margin-top: -13px!important;
+  }
+
+  .position-fixed {
+    position: fixed;
+  }
+  
+  .width-full {
+    width: 100%;
+  }
+  
   /* ========================================== */
   /* END FOR UNIVERSAL TAG STYLE */
 
@@ -98,6 +111,9 @@ nav ul {
 nav li {
   list-style-type: none;
   align-items: stretch;
+}
+nav .menu-items  hr {
+  display: none;
 }
 
 nav ul li a {
@@ -400,6 +416,10 @@ nav ul li:hover a {
     .navbar-container .hamburger-lines {
       display: block;
     } */
+    .on-mobile{ 
+      background:rgba(0, 0, 0, 0.9)!important; 
+      height:100vh;
+    }
     nav ul {
       display: none;
       flex-direction: column;
@@ -415,6 +435,16 @@ nav ul li:hover a {
     #menu-toggle:checked + .hamburger-lines + .menu-items {
       display: flex;
       flex-direction: column;
+      margin-top: 5rem
+    }
+
+    nav .menu-items  hr {
+      color: #fad5fb;
+      display: block;
+      width: 100%;
+      height: 1px;
+      border-radius: 30%;
+      margin-top: -20px;
     }
 
 
