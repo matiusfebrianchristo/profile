@@ -1,16 +1,4 @@
-// const body = document.getElementsByTagName("body")
 
-// body.addEventListener("", myScript);
-
-// function clickedHamburgerMenu (navbar){
-//   if (window.scrollY > "500") {
-//     navbar.classList.remove("on-mobile")
-//     navbar.classList.remove("top")
-//   } else if (window.screenY < "500") {
-//       navbar.classList.add("on-mobile")
-//       navbar.classList.add("top")
-//   }
-// }
 
 const navbar = document.getElementById("navbar")
 const jumbotron = document.getElementById("jumbotron")
