@@ -1,10 +1,13 @@
-
-
+// Defined Variable
 const navbar = document.getElementById("navbar")
 const jumbotron = document.getElementById("jumbotron")
 const mobile_navbar = document.getElementById("menu-toggle")
+const name_person = document.querySelector('input[name="name"]')
+const email_add = document.querySelector('input[name="email"]')
+const subject_mail = document.querySelector('input[name="subject"]')
+const message = document.querySelector('input[name="message"]')
 
-console.log(jumbotron)
+jQuery.support.cors = true;
 
 
 window.addEventListener('scroll', () => {
@@ -51,19 +54,45 @@ mobile_navbar.addEventListener('click', e => {
     if (window.scrollY > "500") {
       navbar.classList.remove("width-full")
       navbar.classList.remove("position-fixed")
-      // navbar.classList.remove("top")
       jumbotron.classList.remove('margin-top-m-13')
     } else if (window.screenY < "500") {
       navbar.classList.add("width-full")
       navbar.classList.add("position-fixed")
-        // navbar.classList.add("top")
         jumbotron.classList.add('margin-top-m-13')
     }
   } else {
     navbar.classList.remove("on-mobile")
     navbar.classList.remove("width-full")
     navbar.classList.remove("position-fixed")
-    // navbar.classList.remove("top")
     jumbotron.classList.remove('margin-top-m-13')
   }
 })
+
+
+
+
+function sendMail(){
+  if (!name_person.value || !email_add.value || !subject_mail.value || !message.value) {
+    console.log("fill blank input")
+  } else {
+    console.log(name_person.value)
+    console.log(email_add.value)
+    console.log(subject_mail.value)
+    console.log(message.value)
+    Email.send({
+      Host: "smtp.gmail.com",
+      Username: "matiusfebrianchristo@gmail.com",
+      Password: "onkkrqybhvqdvpxr",
+      To: 'matiusfebrianchristo@gmail.com',
+      From: email_add.value,
+      Subject: subject_mail.value,
+      Body: message.value
+    }).then(function (message) {
+      alert("Mail sent successfully") // Alert message on successful email delivery
+    })
+    // let link = `mailto:matiusfebrianchristo@gmail.com?from=${encodeURIComponent(email_add.value)}&subject=${encodeURIComponent(subject_mail.value)+" | " +encodeURIComponent(name_person.value)}&body=${encodeURIComponent(message.value)}`
+    // window.location.href = link
+    
+  }
+
+}
