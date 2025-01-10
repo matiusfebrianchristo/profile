@@ -7,8 +7,6 @@ const email_add = document.querySelector('input[name="email"]')
 const subject_mail = document.querySelector('input[name="subject"]')
 const message = document.querySelector('input[name="message"]')
 
-jQuery.support.cors = true;
-
 
 window.addEventListener('scroll', () => {
     if (window.scrollY > "500") {
@@ -79,17 +77,7 @@ function sendMail(){
     console.log(email_add.value)
     console.log(subject_mail.value)
     console.log(message.value)
-    Email.send({
-      Host: "smtp.gmail.com",
-      Username: "matiusfebrianchristo@gmail.com",
-      Password: "onkkrqybhvqdvpxr",
-      To: 'matiusfebrianchristo@gmail.com',
-      From: email_add.value,
-      Subject: subject_mail.value,
-      Body: message.value
-    }).then(function (message) {
-      alert("Mail sent successfully") // Alert message on successful email delivery
-    })
+    
     // let link = `mailto:matiusfebrianchristo@gmail.com?from=${encodeURIComponent(email_add.value)}&subject=${encodeURIComponent(subject_mail.value)+" | " +encodeURIComponent(name_person.value)}&body=${encodeURIComponent(message.value)}`
     // window.location.href = link
     
