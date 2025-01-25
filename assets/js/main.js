@@ -2,10 +2,10 @@
 const navbar = document.getElementById("navbar")
 const jumbotron = document.getElementById("jumbotron")
 const mobile_navbar = document.getElementById("menu-toggle")
-const name_person = document.querySelector('input[name="name"]')
-const email_add = document.querySelector('input[name="email"]')
-const subject_mail = document.querySelector('input[name="subject"]')
-const message = document.querySelector('input[name="message"]')
+// const name_person = document.querySelector('input[name="name"]')
+// const email_add = document.querySelector('input[name="email"]')
+// const subject_mail = document.querySelector('input[name="subject"]')
+// const message = document.querySelector('input[name="message"]')
 let numberCardCertificate = 1
 
 
@@ -68,22 +68,6 @@ mobile_navbar.addEventListener('click', e => {
 })
 
 
-
-
-// function sendMail(){
-//   if (!name_person.value || !email_add.value || !subject_mail.value || !message.value) {
-//     console.log("fill blank input")
-//   } else {
-//     // console.log(name_person.value)
-//     // console.log(email_add.value)
-//     // console.log(subject_mail.value)
-//     // console.log(message.value)
-//     let link = `mailto:matiusfebrianchristo@gmail.com?from=${encodeURIComponent(email_add.value)}&subject=${encodeURIComponent(subject_mail.value)+" | " +encodeURIComponent(name_person.value)}&body=${encodeURIComponent(message.value)}`
-//     window.location.href = link
-    
-//   }
-
-// }
 function counterTimeWork(){
   const today = new Date()
   const JoinDay = new Date("January 2, 2023")
@@ -121,10 +105,13 @@ function changeSlide(isNext) {
   let moved = 0
   const mediaQuery768  = window.matchMedia('(max-width: 768px)')
   if (mediaQuery768.matches) {
-    moved = -27
+    document.querySelectorAll('#certificate .card-certificate').forEach(e => {
+      moved = -(parseFloat(window.getComputedStyle(e).width)/16+7)
+    })
   } else {
     moved = -56
   }
+  
   
   if(isNext) {
     if (numberCardCertificate <6) {
@@ -140,12 +127,14 @@ function changeSlide(isNext) {
         numberCardCertificate -= 1
         document.querySelectorAll('#certificate .card-certificate').forEach(e => {
           e.style.transform = `translateX(0)`
+          // console.log(parseFloat(window.getComputedStyle(e).width)/16+7)
         })
       } else {
         numberCardCertificate -=1
         let minusNumber = numberCardCertificate - 1
         document.querySelectorAll('#certificate .card-certificate').forEach(e => {
           e.style.transform = `translateX(${moved*minusNumber}rem)`
+          // console.log(parseFloat(window.getComputedStyle(e).width)/16+7)
         })
       }
     }
@@ -176,3 +165,50 @@ function viewCertificate(link) {
     openLink('https://www.credly.com/badges/c03a62e8-fc30-4e84-a01e-dc55f95945d7/linked_in_profile')
   }
 }
+
+
+// FOR EMAIL SENDER
+(function() {
+  emailjs.init({
+    publicKey: "2sqqV2gYRrXro8kBW"
+  });  // Replace with your EmailJS user ID
+})();
+
+const form = document.getElementById('form-email');
+
+form.addEventListener('submit', function(event) {
+  event.preventDefault();
+
+  const buttonText = document.querySelector('#contact .btn-txt')
+  const spinner = document.querySelector('#contact .spinner')
+  const name = document.getElementById('name');
+  const email = document.getElementById('email');
+  const subject = document.getElementById('subject');
+  const message = document.getElementById('message');
+
+  buttonText.style.display = 'none'; 
+  spinner.style.display = 'block'
+
+  const templateParams = {
+      from_name: name.value,
+      from_email: email.value,
+      subject: subject.value,
+      message: message.value
+  };
+  console.log(templateParams)
+
+
+
+  emailjs.send('service_efhy06f', 'template_0alfnhp', templateParams)
+      .then(function(response) {
+          alert('Email sent successfully!', response.status, response.text);
+          buttonText.style.display = 'block'; 
+          spinner.style.display = 'none'
+          name.value = ""
+          email.value = ""
+          subject.value = ""
+          message.value = ""
+      }, function(error) {
+          alert('Failed to send email. Please try again.', error);
+      });
+});

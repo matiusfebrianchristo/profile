@@ -26,6 +26,7 @@
     integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 </head>
 
 <body >
@@ -46,6 +47,7 @@
           <li><a href="#skills">Skills</a></li><hr>
           <li><a href="#experiences">Experience</a></li><hr>
           <li><a href="#certificate">Certificate</a></li><hr>
+          <li><a href="#contact">Contact</a></li><hr>
           <!-- <li><a href="https://wa.me/6285236598358" target="_blank">Contact</a></li><hr> -->
         </ul>
       </div>
@@ -59,7 +61,6 @@
 
   <!-- Main Content -->
   <main id="about">
-    <!-- Konten artikel -->
     <div id="content">
       <article id="article-about">
         <div class="card">
@@ -68,7 +69,7 @@
             <img src="assets/img/me3_edited.jpg" alt="My Picture" class="featured-image" />
             <div class="paragraph">
               <p>
-                Hello, i'am Matius Febrian Chisto form East Java, Indonesia. I'am 20 years old. I have 2 brothers and i the youngest
+                Hello, i'am Matius Febrian Christo form East Java, Indonesia. I'am 20 years old. I have 2 brothers and i the youngest
                 child of 3 siblings.
                 I like music and some sports like badminton. In music, I usually like playing guitar, keyboard and maybe drums, I've liked it for a long time.
                 I graduated from <strong><a href="https://smkn1nglegok.sch.id/" target="_blank" class="text-link">SMKN 1 NGLEGOK</a> </strong>
@@ -86,6 +87,7 @@
         </div>
       </article>
 
+      <!-- Skills -->
       <article id="skills">
         <div class="card">
           <h2 style="text-align:center; font-size:35px;" >Skills</h2>
@@ -131,11 +133,10 @@
               </p>
             </div>
           </div>
-
-          
         </div>
       </article>
 
+      <!-- Experiences -->
       <article id="experiences" class="card">
         <h2 style="text-align:center; font-size:35px;">Experience</h2>
         <div class="experience-container">
@@ -191,8 +192,9 @@
             </ul>
           </div>
         </div>
-        </article>
-
+      </article>
+      
+      <!-- Certificate  -->
       <article id="certificate" class="card">
         <h2 style="text-align:center; font-size:35px; margin-top:5rem;">Certificate</h2>
         <div class="certificate-container">
@@ -260,25 +262,28 @@
           </div> -->
         </div>
       </article>
+
+      <!-- CONTACT -->
       <div id="contact">
-        <h2>Contact</h2>
-        <div class="contact-containter">
+        <h2 style="text-align:center; font-size:35px; ">Contact</h2>
+        <div class="contact-container">
           <div class="social-media">
             <ul>
-              <li>LinkedIn</li>
-              <li>Email</li>
-              <li>Phone Number</li>
-              <li>Location</li>
+              <li><i class="fa fa-linkedin-square" aria-hidden="true"></i><a href="https://www.linkedin.com/in/matius-febrian-christo-a8331b1ab/" target="_blank"> matiusfebrianchristo</li></a>
+              <li><i class="fa fa-envelope" aria-hidden="true"></i><a href="mailto:matiusfebrianchristo@gmail.com" target="_blank"> matiusfebrianchristo@gmail.com</li></a>
+              <li><i class="fa fa-phone" aria-hidden="true"></i><a href="https://wa.me/6285236598358" target="_blank"> +62 852-3659-8358</li></a> 
+              <li><i class="fa fa-map-marker" aria-hidden="true"></i> <span style="color: rgba(255, 255, 255, 0.741);">Blitar, East Java, Indonesia</span></li>
             </ul>
           </div>
-          <div class="form-email">
-          <!-- </form> -->
-            <input type="text" name="name" class="name_person" placeholder="Name" required>
-            <input type="email" name="email" class="email" placeholder="Email" required>
-            <input type="text" name="subject" class="subject" placeholder="Subject" required>
-            <input type="text" name="message" class="message" placeholder="Message" required>
-            <button class="btn-send-email"  onclick="sendMail()">Send Message</button>
-          </div>
+          <form id="form-email">
+            <div class="identity">
+              <input type="text" name="name" id="name" class="name_person" placeholder="Name" required>
+              <input type="email" name="email" id="email" class="email" placeholder="Email" required>
+            </div>
+            <input type="text" name="subject" id="subject" class="subject" placeholder="Subject" required>
+            <textarea type="text" name="message" id="message" class="message" placeholder="Enter message here..." required></textarea>
+            <button class="btn-send-email"  type="submit"><span class="spinner" style="display: none;"></span><span class="btn-txt">Send Email</span></button>
+          </form>
         </div>
       </div>
     </div>
@@ -286,7 +291,7 @@
   <!-- End Content -->
 
   <footer>
-    <p>&copy;2024 made with &hearts; by Matius Febrian Christo</p>
+    <p>&copy;2025 made with &hearts; by Matius Febrian Christo</p>
   </footer>
 </body>
 

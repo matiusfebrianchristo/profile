@@ -39,6 +39,7 @@
   
   main {
     padding: 22px 0;
+    padding-bottom: 0;
     display: flex;
     gap: 1.5rem;
     /* background-color: #050118; */
@@ -49,6 +50,7 @@
   #content {
     flex: 4;
     margin: 2rem 0;
+    margin-bottom: 0;
     display: flex;
     flex-flow: column nowrap;
     /* gap: 1rem 2rem; */
@@ -477,6 +479,130 @@ nav ul li:hover a {
   }
 
 
+  /* ========================================== */
+  /* END STYLE FOR ARTICLE CERTIFICATE */
+
+
+  /* ========================================== */
+  /* STYLE FOR CONTACT SECTION */
+
+  /* #contact {
+    
+  } */
+
+  #contact  {
+    background: linear-gradient(rgba(0, 0, 0, 0.6),rgba(0, 0, 0, 0.7));
+    min-height: 49.5rem;
+    padding: 3.5rem 2rem;
+    background-size: cover;
+    background-repeat: no-repeat;
+    /* padding-bottom: 0; */
+  }
+
+  #contact h2 {
+    margin-top:2rem; 
+    margin-bottom:5rem;
+  }
+
+  #contact .contact-container {
+    display: flex;
+    /* flex-wrap: wrap; */
+    flex-direction: row;
+    justify-content: center;
+    gap: 2rem;
+    padding: 0 10rem;
+  }
+
+  #contact .contact-container .social-media {
+    color: white;
+    width: 50%;
+  }
+  #contact .contact-container .social-media ul {
+    list-style: none;
+  }
+
+  #contact .contact-container .social-media li {
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+  }
+
+  #contact .contact-container .social-media a {
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.741);
+    
+  }
+
+  #contact .contact-container .social-media i {
+    font-size: 30px;
+    width: 40px;
+  }
+
+
+  #contact .contact-container #form-email {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 80%;
+  }
+
+  #contact input, #contact textarea{
+    padding: 1.2rem 1rem ;
+  }
+
+  #contact input.name_person, #contact input.email {
+    width: 49.5%;
+  }
+
+  #contact input.name_person, #contact input.email, #contact input.subject {
+    height: 3.5rem;
+    border-radius: 10px;
+  }
+
+  #contact textarea {
+    height: 15rem;
+    border-radius: 10px;
+  }
+
+  #contact .btn-send-email {
+    width: 15rem;
+    height: 2.5rem;
+    border-radius: 10px;
+    border: none;
+    background-color: #fb26db9b;
+    cursor: pointer;
+    transition: all .5s;
+    color: rgb(242, 242, 242);
+    font-weight: bold;
+    font-size: 15px;
+  }
+
+  #contact .btn-send-email:hover {
+    background-color: #fb26db72;
+    color: rgba(242, 242, 242, 0.851);
+    transition: all .5s;
+  }
+  
+  /* LOADER */
+  #contact .spinner {
+     width: 26px;
+     height: 26px;
+     justify-self: center;
+     border-radius: 50%;
+     background: radial-gradient(farthest-side,#f2f2f2 94%,#0000) top/9px 9px no-repeat,
+            conic-gradient(#0000 30%,#f2f2f2);
+     mask: radial-gradient(farthest-side,#0000 calc(100% - 9px),#000 0);
+     -webkit-mask: radial-gradient(farthest-side,#0000 calc(100% - 9px),#000 0);
+     animation: spinner-c7wet2 1s infinite linear;
+  }
+  
+  @keyframes spinner-c7wet2 {
+     100% {
+        transform: rotate(1turn);
+     }
+  }
+    
+
 
   footer {
     padding: 20px;
@@ -578,6 +704,43 @@ nav ul li:hover a {
       width: 30%;
       height: 30%;
     }
+
+    #contact  {
+      /* min-height: 49.5rem; */
+      padding: 0 2 rem;
+    }
+
+    #contact .contact-container {
+      padding: 0 2rem;
+      /* padding-bottom: 2rem; */
+    }
+    #contact .contact-container .social-media {
+      color: white;
+      width: 100%;
+    }
+
+    #contact .contact-container #form-email {
+      width: 90%;
+    }
+
+    #contact input.name_person {
+      margin-bottom: 10px;
+    }
+
+    #contact input.name_person, #contact input.email {
+      width: 100%;
+    }
+
+    #contact .btn-send-email {
+      width: 100%;
+    }
+
+    #contact h2 {
+      margin-top:3rem; 
+      /* margin-bottom:5rem; */
+    }
+
+
   
   }
    
@@ -654,26 +817,18 @@ nav ul li:hover a {
     }
 
     .certificate-container {
-      /* min-height: 49.5rem; */
       display: flex;
-      /* justify-content: center; */
-      padding: 3.5rem 2rem;
-      /* overflow: hidden; */
-      /* max-width: 60rem; */
-      /* margin:auto; */
+      padding: 3.5rem 1.5rem;
+      justify-items: center;
+      overflow: hidden;
       gap: 7rem;
     }
   
     #certificate .card-certificate {
-      /* background-color: #2c2b37; */
-      min-width: 20rem;
-      /* padding: 2rem 2.5rem; */
+      min-width: 100%;
       display: flex;
       align-items: center;
-      /* border-radius: 20px; */
       flex-direction: column;
-      /* justify-content: center; */
-      /* gap: 20px; */
       transition: all ease-in-out 1s;
     }
   
@@ -701,5 +856,41 @@ nav ul li:hover a {
       /* border-radius: 3px 0 0 3px; */
     }
 
+    #contact .contact-container {
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    #contact  {
+      /* min-height: 49.5rem; */
+      padding: 0;
+    }
+
+    #contact .contact-container {
+      padding: 0;
+      padding-bottom: 2rem;
+    }
+    #contact .contact-container .social-media {
+      color: white;
+      width: 100%;
+    }
+
+    #contact .contact-container #form-email {
+      width: 90%;
+    }
+
+    #contact input.name_person {
+      margin-bottom: 10px;
+    }
+
+    #contact input.name_person, #contact input.email {
+      width: 100%;
+    }
+
+    #contact .btn-send-email {
+      width: 100%;
+    }
+
     
   }
+  
