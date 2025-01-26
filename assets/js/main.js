@@ -212,3 +212,17 @@ form.addEventListener('submit', function(event) {
           alert('Failed to send email. Please try again.', error);
       });
 });
+
+
+// const bgImageUrl = '../img/background.jpg';
+// const loader = document.getElementById('loader-page');
+
+// // Create a hidden image element to preload the background image
+// const img = new Image();
+// img.src = bgImageUrl;
+
+// // When the background image loads
+// img.onload = () => {
+//   document.body.style.overflow = ""
+//   loader.remove()
+// };
